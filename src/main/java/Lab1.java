@@ -45,6 +45,7 @@ public class Lab1 {
 		   for(int count = 0; count < len; count++) {
 			   if(array[count] > largestNum) {
 				   index = count;
+				   largestNum = array[count];
 			   }
 		   }
 		   
