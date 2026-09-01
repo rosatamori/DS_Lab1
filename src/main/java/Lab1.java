@@ -64,9 +64,8 @@ public class Lab1 {
 				   return true;
 			   }
 		   }
+		   
 	      return false;      
-	  	
-	      
 	   }
 
 
@@ -80,7 +79,28 @@ public class Lab1 {
 	*/
 	   public static int fib(int n)
 	   {
-	      return 0;
+		   //less than 1
+		   if(n < 1) {
+			   return 0;
+		   }
+		   //get fibonacci
+		   else if(n == 1 || n == 2) {
+			   return 1;
+		   }
+		   
+		   int counter = 2;
+		   int back2 = 1;
+		   int back1 = 1;
+		   int sum = 0;
+		   
+		   while(counter < n) {
+			   sum = back1 + back2;
+			   back2 = back1;
+			   back1 = sum;
+			   counter++;
+		   }
+		   
+	      return sum;
 	   }
 
 }
